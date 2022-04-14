@@ -1,7 +1,7 @@
 <!--
  * @Author       : Eug
  * @Date         : 2022-04-14 15:36:11
- * @LastEditTime : 2022-04-14 16:27:33
+ * @LastEditTime : 2022-04-14 19:40:53
  * @LastEditors  : Eug
  * @Descripttion : Descripttion
  * @FilePath     : /tauri-app/src/layout/Menu.vue
@@ -69,15 +69,15 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { MailOutlined, QqOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons-vue';
-import { useRouter, useRoute } from 'vue-router'
-import type { MenuProps } from 'ant-design-vue'
+import { useRouter, useRoute } from 'vue-router';
+import type { MenuProps } from 'ant-design-vue';
 
 
 
 const router  = useRouter()
 const route = useRoute()
-const selectedKeys = ref<string[]>([route.name]);
-const openKeys = ref<string[]>([route.name]);
+const selectedKeys = ref<string[]>(['']);
+const openKeys = ref<string[]>([""]);
 
 
 
@@ -88,7 +88,7 @@ const titleClick = (e: Event) => {
   console.log('titleClick', e);
 };
 
-const handleClick: MenuProps['onClick'] = e => {
+const handleClick: MenuProps['onClick'] = (e:any) => {
   console.log('click', e.key);
   router.push({
     name: e.key
@@ -105,7 +105,7 @@ watch(
 );
 watch(
   () => selectedKeys,
-  val => {
+  (val:any)=> {
     console.log('selectedKeys', val);
     router.push({
       name: val
