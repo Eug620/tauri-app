@@ -1,7 +1,7 @@
 /*
  * @Author       : Eug
  * @Date         : 2022-04-15 11:46:17
- * @LastEditTime : 2022-04-15 11:50:37
+ * @LastEditTime : 2022-04-15 12:14:58
  * @LastEditors  : Eug
  * @Descripttion : Descripttion
  * @FilePath     : /tauri-app/scripts/check.mjs
@@ -24,7 +24,7 @@ function resolveClash() {
 
   const CLASH_URL_PREFIX =
     "https://github.com/Dreamacro/clash/releases/download/premium/";
-  const CLASH_LATEST_DATE = "2022.04.15";
+  const CLASH_LATEST_DATE = "2022.04.11";
 
   // todo
   const map = {
